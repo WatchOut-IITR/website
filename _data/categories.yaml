@@ -1,0 +1,80 @@
+---
+# - name: interiit
+#   title: Inter IIT Cult
+#   subcategories:
+# - name: memoirs
+#   title: Memoirs
+  # subcategories:
+- name: academics
+  title: Academics
+  subcategories:
+    - name: know_your_department
+      title: Know Your Department
+    - name: research
+      title: Research at IITR
+    - name: awards_scholarships
+      title: Awards and Scholarships    
+# - name: cultural
+#   title: Cultural
+#   subcategories:
+# - name: columns
+#   title: Columns
+#   subcategories:
+#     - name: coverstory
+#       title: Cover Story
+#     - name: bigstory
+#       title: Big Story
+#     - name: almostfamous
+#       title: Almost Famous
+#     - name: guestcomentary
+#       title: Guest Comentary
+#     - name: editorial
+#       title: Editorial
+#     - name: tech
+#       title: Tech
+# - name: filtercoffee
+#   title: Filter Coffee
+#   subcategories:
+- name: career
+  title: Career
+  subcategories:
+# - name: sac
+#   title: SAC
+#   subcategories:
+# - name: phekingnews
+#   title: Pheking News
+#   subcategories:
+- name: verbatim
+  title: Verbatim
+  subcategories:
+# - name: sports
+#   title: Sports
+#   subcategories:
+# - name: internblogs
+#   title: Intern Blogs
+#   subcategories:
+#     - name: summer2016
+#       title: Summer 2016
+#     - name: summer2017
+#       title: Summer 2017
+#     - name: summer2018
+#       title: Summer 2018
+#     - name: summer2019
+#       title: Summer 2019
+#     - name: summer2020
+#       title: Summer 2020
+- name: editorials
+  title: Editorials
+  subcategories:
+- name: design
+  title: Design
+  subcategories:
+- name: guest_editorials
+  title: Guest Editorials
+  subcategories:
+- name: multimedia
+  title: Multimedia
+  subcategories:
+- name: campus_journalism
+  title: Campus Journalism
+  subcategories:
