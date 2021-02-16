@@ -2,19 +2,19 @@
 layout: layout
 ---
 
-{% include cat_header.html %}
-
 <div class="category-posts container">
   <div class="row">
     <div class="col-md-8">
-      {{page.category}}
-      {{site.data.categories.name}}
-      {% for subcat in site.data.categories[page.category] %}
-      <li> {{subcat}} </li>>
-
-      {% for post in site.categories[subcat.name] offset: 1 %}      
+      {% for cat in site.data.categories %}
+      {% if cat.name == page.category %}
+      {% for subcat in cat.subcategories %}
+      {{site.categories[subcat.name]}}
+      {% for post in site.categories[subcat.name] %}  
+          
       {% include vertical_post.html post=post %}
       {% endfor %}
+      {% endfor %}
+      {% endif %}
       {% endfor %}
     </div>
     <div class="col-md-4">

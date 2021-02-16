@@ -6,6 +6,7 @@ tags: [wona]
 category: research
 excerpt: "zu"
 ---
+RESEARCHHH
 A banana is an edible fruit – botanically a berry – produced by several kinds
 of large herbaceous flowering plants in the genus Musa.
 
