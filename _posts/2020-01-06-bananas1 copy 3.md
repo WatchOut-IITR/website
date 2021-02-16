@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Chemical Dept says how do you do"
-image: "beautiful-life.jpg"
+image: "choreo1.png"
 tags: [wona]
 category: know_your_department
 excerpt: "zu"

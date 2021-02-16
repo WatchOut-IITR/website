@@ -1,10 +1,12 @@
 ---
 layout: post
 title: "Research article"
-image: "online-exams-and-the-spring-semester.jpg"
+image: "Aashaka3.jpg"
 tags: [wona]
 category: research
-excerpt: "zu"
+excerpt: "RESEARCHHH
+A banana is an edible fruit – botanically a berry – produced by several kinds
+of large herbaceous flowering plants in the genus Musa."
 ---
 RESEARCHHH
 A banana is an edible fruit – botanically a berry – produced by several kinds

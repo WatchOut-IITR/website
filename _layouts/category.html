@@ -2,24 +2,29 @@
 layout: layout
 ---
 
-<div class="category-posts container">
-  <div class="row">
-    <div class="col-md-4">
-      {% for cat in site.data.categories %}
+<div class="category-posts container">  
+      
+      {% for cat in site.data.categories %} 
       {% if cat.name == page.category %}
+      <h2 style="padding-left: 2%">{{cat.title}} </h2>
       {% for subcat in cat.subcategories %}
-
-      {% for post in site.categories[subcat.name] %}  
-          
-      {% include vertical_post.html post=post %}
-      {% endfor %}
+      <div class ="row" style= "padding-bottom: 4%">
+        <h2 style="padding-left: 1%">{{subcat.title}}</h2>
+        {% for post in site.categories[subcat.name] %}  
+        <div class="col-sm-4 article-col" style="padding-right: 6%;">    
+          {% include vertical_post.html post=post %}
+        </div>
+        {% endfor %}
+        <a href="/subcategory/{{subcat.name}}/">see more</a>>
+      </div>
       {% endfor %}
       {% endif %}
       {% endfor %}
-    </div>
-    <div class="col-md-4">
-      <div class="fb-page" data-href="https://www.facebook.com/WatchOutNewsAgency/" data-tabs="timeline" data-width="330" data-height="540" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/WatchOutNewsAgency/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/WatchOutNewsAgency/">Watch Out! News Agency</a></blockquote></div>
-    </div>
-  </div>
+       
+      <div class="col-md-4">
+        <div class="fb-page" data-href="https://www.facebook.com/WatchOutNewsAgency/" data-tabs="timeline" data-width="330" data-height="540" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/WatchOutNewsAgency/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/WatchOutNewsAgency/">Watch Out! News Agency</a></blockquote></div>
+      </div>
+
+<!--   {{cat.name}}/subcategory/ -->
 </div>
 

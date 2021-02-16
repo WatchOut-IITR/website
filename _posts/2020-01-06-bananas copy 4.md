@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Geophysics lab orientation"
-image: "online-exams-and-the-spring-semester.jpg"
+image: "adobe-2.png"
 tags: [wona]
 category: research 
 excerpt: "zu"

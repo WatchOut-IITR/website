@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "Research, Quantum Computing"
-image: "online-exams-and-the-spring-semester.jpg"
+image: "adobe-1.png"
 tags: [wona]
 category: research
-excerpt: "zu"
+excerpt: "A banana is an edible fruit – botanically a berry – produced by several kinds
+of large herbaceous flowering plants in the genus Musa."
 ---
 A banana is an edible fruit – botanically a berry – produced by several kinds
 of large herbaceous flowering plants in the genus Musa.

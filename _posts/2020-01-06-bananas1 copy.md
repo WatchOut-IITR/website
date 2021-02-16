@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Physics is Bae"
-image: "beautiful-life.jpg"
+image: "rajendra1.jpg"
 tags: [wona]
 category: know_your_department
 excerpt: "zu"

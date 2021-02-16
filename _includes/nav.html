@@ -45,7 +45,7 @@
             {% for subcat in cat.subcategories %}
             {% if subcat.title != nil %}  
                    
-            <li><a class="hover-underline" href="/category/{{cat.name}}/{{ subcat.name }}/">{{ subcat.title }}</a></li>
+            <li><a class="hover-underline" href="/subcategory/{{ subcat.name }}/">{{ subcat.title }}</a></li>
             {% endif %}
             {% endfor %}
 

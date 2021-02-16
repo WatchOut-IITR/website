@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Know your Department article"
-image: "beautiful-life.jpg"
+image: "amazon.jpg"
 tags: [wona]
 category: know_your_department
 excerpt: "zu"

@@ -67,6 +67,10 @@ defaults:
     values:
       is_category_page: true
       layout: category
+  - scope:
+      path: "subcategory"
+    values:
+      layout: "subcategory"
 
 markdown: kramdown
 permalink: /:year/:month/:title
