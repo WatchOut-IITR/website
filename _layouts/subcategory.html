@@ -7,14 +7,8 @@ layout: layout
 <div class="category-posts container">
   <div class="row">
     <div class="col-md-8">
-      {{page.category}}
-      {{site.data.categories.name}}
-      {% for subcat in site.data.categories[page.category] %}
-      <li> {{subcat}} </li>>
-
-      {% for post in site.categories[subcat.name] offset: 1 %}      
-      {% include vertical_post.html post=post %}
-      {% endfor %}
+      {% for post in site.categories[page.category] offset: 1 %}
+      {% include horizontal_post.html post=post %}
       {% endfor %}
     </div>
     <div class="col-md-4">
@@ -22,4 +16,3 @@ layout: layout
     </div>
   </div>
 </div>
-
