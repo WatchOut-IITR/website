@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "bananas"
+title: "Know your Department article"
 image: "beautiful-life.jpg"
 tags: [wona]
 category: know_your_department

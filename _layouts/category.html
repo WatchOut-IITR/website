@@ -4,11 +4,11 @@ layout: layout
 
 <div class="category-posts container">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-4">
       {% for cat in site.data.categories %}
       {% if cat.name == page.category %}
       {% for subcat in cat.subcategories %}
-      {{site.categories[subcat.name]}}
+
       {% for post in site.categories[subcat.name] %}  
           
       {% include vertical_post.html post=post %}

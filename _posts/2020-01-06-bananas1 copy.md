@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "bananas"
+title: "Physics is Bae"
 image: "beautiful-life.jpg"
 tags: [wona]
-category: academics
+category: know_your_department
 excerpt: "zu"
 ---
 A banana is an edible fruit – botanically a berry – produced by several kinds

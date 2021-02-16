@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "bananas"
+title: "Research article"
 image: "online-exams-and-the-spring-semester.jpg"
 tags: [wona]
 category: research

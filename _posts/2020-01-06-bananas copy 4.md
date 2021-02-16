@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "bananas"
+title: "Geophysics lab orientation"
 image: "online-exams-and-the-spring-semester.jpg"
 tags: [wona]
-category: academics
+category: research 
 excerpt: "zu"
 ---
 A banana is an edible fruit – botanically a berry – produced by several kinds
