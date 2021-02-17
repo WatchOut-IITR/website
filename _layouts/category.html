@@ -7,8 +7,10 @@ layout: layout
       {% for cat in site.data.categories %} 
       {% if cat.name == page.category %}
       <h2 style="margin-top: 27px; color: #F88D67; font-weight: normal; font-size: 25px; text-transform: uppercase;">{{cat.title}} </h2>
+      
       {% for subcat in cat.subcategories %}
-      <div class ="row" style= "padding-bottom: 4%;margin-top: 44px;">
+
+      <div class ="row" style= "padding-bottom: 4%;margin-top: 44px; background-color: #F2F8FA;">
         <h2 style=" margin-top: 23px; margin-bottom: 44px; padding-left: 1%; font-size: 30px;">{{subcat.title}}</h2>
         {% for post in site.categories[subcat.name] %}  
         <div class="col-sm-4 article-col" style="padding-right: 6%;">    
@@ -33,4 +35,4 @@ layout: layout
 <!--   {{cat.name}}/subcategory/ -->
 </div>
 
-<!--#F2F8FA-->
+<!---->
