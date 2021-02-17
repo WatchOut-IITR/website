@@ -4,9 +4,9 @@
 // ================ VARS ===============//
 
 // Bootstrap vars
-$font-color: #333;
+$font-color: #00344A;
 $container-lg: 1040px;
-$navbar-default-brand-color: #4e4e4e;
+$navbar-default-brand-color: #00344A;
 $navbar-default-bg: #fff;
 $navbar-default-border: none;
 
@@ -123,7 +123,7 @@ body {
       width: 7.3em;
       position: absolute;
       bottom: 0;
-      color: #ababab;
+      color: #5C6C73;
     }
   }
 
@@ -137,7 +137,7 @@ body {
     padding: $pre-nav-logo-height * .623 0;
     font-size: 16px;
     font-weight: bold;
-    color: #ababab;
+    color: #5C6C73;
 
     > * {
       margin-left: 1em;
@@ -150,7 +150,7 @@ nav {
 	width: 100%;
   z-index: 200;
   border-radius: 0;
-
+  
   .navbar-brand {
     display: none;
   }
@@ -181,6 +181,7 @@ nav {
 
 #navbar {
   padding: 0;
+  
 }
 
 .nav > li {
@@ -188,23 +189,28 @@ nav {
   display: inline-block;
   float: none;
   margin-bottom: -100%; // Hack to fix the spacing between header and navbar
-
+  
   &:first-of-type a {
     padding-left: 0;
+    
   }
+ 
 
   &:last-of-type a {
     padding-right: 0;
+    
   }
 }
 .navbar-nav {
-	font-size: 16px;
+	font: normal normal normal 20px/24px Lato;
+  
   text-align: justify;
-  font-weight: bold;
+  
 
   &:after {
     width: 100%; /* Ensures justification for single lines */
     display: inline-block;
+    
   }
 }
 

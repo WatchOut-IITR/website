@@ -6,16 +6,21 @@ layout: layout
       
       {% for cat in site.data.categories %} 
       {% if cat.name == page.category %}
-      <h2 style="padding-left: 2%">{{cat.title}} </h2>
+      <h2 style="margin-top: 27px; color: #F88D67; font-weight: normal; font-size: 25px; text-transform: uppercase;">{{cat.title}} </h2>
       {% for subcat in cat.subcategories %}
-      <div class ="row" style= "padding-bottom: 4%">
-        <h2 style="padding-left: 1%">{{subcat.title}}</h2>
+      <div class ="row" style= "padding-bottom: 4%;margin-top: 44px;">
+        <h2 style=" margin-top: 23px; margin-bottom: 44px; padding-left: 1%; font-size: 30px;">{{subcat.title}}</h2>
         {% for post in site.categories[subcat.name] %}  
         <div class="col-sm-4 article-col" style="padding-right: 6%;">    
           {% include vertical_post.html post=post %}
         </div>
         {% endfor %}
-        <a href="/subcategory/{{subcat.name}}/">see more</a>>
+        <div class="col-sm-10 article-col" style="padding-right: 6%;">
+        </div>
+        <div class="col-sm-2 article-col" style="padding-right: 6%;">
+          <a href="/subcategory/{{subcat.name}}/" style="text-align: right; font-weight: bold; color: #F88D67; font-size: 15px;">SEE MORE>></a>
+          </div>
+        
       </div>
       {% endfor %}
       {% endif %}
@@ -28,3 +33,4 @@ layout: layout
 <!--   {{cat.name}}/subcategory/ -->
 </div>
 
+<!--#F2F8FA-->
