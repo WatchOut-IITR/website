@@ -29,7 +29,8 @@ $carousel-height: 625px;
 // =============== /VARS ===============//
 
 @import "bootstrap";
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 @charset "UTF-8";
 
 // ============== MIXINS ============== //
@@ -82,11 +83,15 @@ $carousel-height: 625px;
 }
 
 body {
+  min-height: 100vh !important;
+  position: relative;
 	font-size: 13px;
 	color: $font-color;
 	background: #fff;
 	font-family: Lato, Merriweather, Open Sans, sans-serif;
 	@include box-sizing();
+  // adding padding-bottom bcuz I want my footer to stick to bottom when content of body is less and otherwise to stay at the end of page
+  padding-bottom: 300px;
 }
 
 *{
@@ -473,34 +478,34 @@ nav {
 // ========= /FEATURED-ARTICLES ========== //
 
 // ================ VIDEO ================ //
-#yt-videos-container {
-  padding-top: 20px;
-}
+// #yt-videos-container {
+//   padding-top: 20px;
+// }
 
-.video-container {
-  height: 400px;
-}
+// .video-container {
+//   height: 400px;
+// }
 
-.video-caption {
-  text-align: center;
-  .caption {
-    margin-top: 0;
-    font-size: 28px;
-  }
-}
+// .video-caption {
+//   text-align: center;
+//   .caption {
+//     margin-top: 0;
+//     font-size: 28px;
+//   }
+// }
 
-.video-list {
-  list-style: none;
-}
+// .video-list {
+//   list-style: none;
+// }
 
-.list-video {
-  height: 100px;
-  margin-bottom: 15px;
+// .list-video {
+//   height: 100px;
+//   margin-bottom: 15px;
 
-  .caption {
-    height: 100%;
-  }
-}
+//   .caption {
+//     height: 100%;
+//   }
+// }s
 // =============== /VIDEO ================ //
 
 // ============== COMPONENTS ============== //
@@ -733,26 +738,26 @@ blockquote {
 
 // ========= /RELATED-ARTICLES ======= //
 
-// ============== FOOTER ============== //
+// // ============== FOOTER ============== //
 
-footer {
-  position: relative;
-	background: #f3f3f3;
-  color: #b8b8b8;
-  margin-top: 20px;
-  padding-top: 22px;
-  border-top: 1px solid #c5c5c5;
+// footer {
+//   position: relative;
+// 	background: #f3f3f3;
+//   color: #b8b8b8;
+//   margin-top: 20px;
+//   padding-top: 22px;
+//   border-top: 1px solid #c5c5c5;
 
-  a:hover {
-    color: #ddd;
-  }
-}
+//   a:hover {
+//     color: #ddd;
+//   }
+// }
 
-.copyright {
-  border-top: 1px solid #d9d9d9;
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
+// .copyright {
+//   border-top: 1px solid #d9d9d9;
+//   padding-top: 10px;
+//   padding-bottom: 20px;
+// }
 
 // ============== /FOOTER ============== //
 

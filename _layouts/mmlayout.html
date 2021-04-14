@@ -1,0 +1,176 @@
+---
+layout: layout
+---
+<script>
+  var x = window.matchMedia("(max-width: 720px)")
+  var arr=document.getElementsByClassName("cat-see-but");
+  var i=0;
+  function myFunction(x) {
+    if (x.matches) { // If media query matches
+      for(i=0;i<arr.length;i++){
+        arr[i].innerHTML="SEE MORE";
+      }
+    } else {
+      for(i=0;i<arr.length;i++){
+        arr[i].innerHTML="SEE MORE ->";
+      }
+    }
+  }
+  function init(x){
+    if (x<720 ) { // If media query matches
+      for(i=0;i<arr.length;i++){
+        arr[i].innerHTML="SEE MORE";
+      }
+    } else {
+      for(i=0;i<arr.length;i++){
+        arr[i].innerHTML="SEE MORE ->";
+      }
+    }
+  }   
+  x.addListener(myFunction) // Attach listener function on state changes
+  myFunction(x)   // Call listener function at run time
+  window.onload = function() {
+  init(window.innerWidth);
+};
+  </script>
+<link rel="stylesheet" href="/css/multimedia_css.css">
+  <div class="container-multi">
+    <div class="latest">
+      <div class="lat cen">
+          <div class="focus">
+            {% assign video= site.data.youtube.first %}
+            <a href="https://www.youtube.com/watch?v={{ video.id }}">
+              <img class="main-img" src="http://img.youtube.com/vi/{{ video.id  }}/maxresdefault.jpg">
+            </a>
+            <div class="focus-detail">
+              <div class="intit">
+                <a href="https://www.youtube.com/watch?v={{ video.id }}">
+                  {{ video.title }}
+                </a>
+               </div>
+              <div class="intag">
+                <a href="#">
+                  {{ video.tag }}
+                </a>
+              </div>
+              <div class="indate">
+                {{video.date}}
+              </div>
+            </div>
+          </div>
+          <div class="side">
+            <div class="side1">
+              {% for video in site.data.youtube offset:1 limit:1 %}
+              <a href="https://www.youtube.com/watch?v={{ video.id }}">
+                <img class="side-img" src="http://img.youtube.com/vi/{{ video.id  }}/maxresdefault.jpg">
+              </a>        
+                <div class="side-detail">
+                  <div class="sidetit">
+                    <a href="https://www.youtube.com/watch?v={{ video.id }}">
+                      {% if video.title.size > 28 %}
+                        {{video.title | truncate: 28,".."}}
+                      {% else %}
+                        {{video.title}}
+                      {%endif%}
+                    </a>       
+                  </div>
+                  <div class="sidetag">
+                    {{video.tag}}
+                  </div>
+                  <div class="sidedate">
+                    {{video.date}}
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="side2">
+              {% for video in site.data.youtube offset:2 limit:1 %}
+              <a href="https://www.youtube.com/watch?v={{ video.id }}">
+                <img class="side-img" src="http://img.youtube.com/vi/{{ video.id  }}/maxresdefault.jpg">
+              </a>
+              <div class="side-detail">
+                <div class="sidetit">
+                  <a href="https://www.youtube.com/watch?v={{ video.id }}">
+                    {% if video.title.size > 28 %}
+                      {{video.title | truncate: 28,".."}}
+                    {% else %}
+                      {{video.title}}
+                    {%endif%}
+                  </a>
+                </div>
+                <div class="sidetag">
+                  {{video.tag}}
+                </div>
+                <div class="sidedate">
+                  {{video.date}}
+                 </div>
+              </div>
+              {% endfor %}
+            </div>
+            </div>
+      </div>
+    </div>
+
+    {% for cat in site.data.categories %}
+    {% if cat.name == page.category %}
+    {%assign even=false%}
+    {% for subcat in cat.subcategories %}
+    
+    {%if even==false%}
+    {%assign even = true%}
+    {%assign format="alt1"%}
+    {%elsif even==true%}
+    {%assign even=false%}
+    {%assign format="alt2"%}
+    {%endif%}
+    
+    <div class={{format}}>
+      <div class="same cen">
+        <div class="cat-tit">
+        {{subcat.title | upcase}}
+        </div>
+        <div class="cat-ex">
+          {% assign video-list = "" | split: ',' %}
+          {% for video in site.data.youtube %}
+            {% if video.tag == {{subcat.title}}%}
+              {% assign video-list = video-list | push: video %}
+            {% endif %}
+          {% endfor %}
+
+          {% for video in video-list limit:3 %}
+          <div class="cat-ex-item">
+            <div class ="mob-ex">
+            <a href="https://www.youtube.com/watch?v={{ video.id }}">
+              <img class="same-img" src="http://img.youtube.com/vi/{{ video.id  }}/maxresdefault.jpg">
+            </a>
+          </div>
+            <div class="same-detail">
+              <div class="sametit">
+                <a href="https://www.youtube.com/watch?v={{ video.id }}">
+                  {% if video.title.size > 36 %}
+                    {{video.title | truncate: 36,".."}}
+                  {% else %}
+                    {{video.title}}
+                  {%endif%}
+                </a>
+              </div>
+              <div class="sametag">
+                {{video.tag}}
+              </div>
+              <div class="samedate">
+                {{video.date}}
+              </div>
+            </div>
+         </div>
+         {% endfor %}
+        </div>
+        <div class="cat-see">
+          <button class="cat-see-but">SEE MORE -></button>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endfor %}
+</div>
+
