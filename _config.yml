@@ -18,13 +18,23 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Watch Out, IIT Roorkee
-description: The official news magazine of IIT Roorkee.
+name: Watch Out, IIT Roorkee
 url: http://watchout.iitr.ac.in
+gems: [jekyll-paginate]
+description: The official news magazine of IIT Roorkee.
+paginate: 10
+paginate_path: "/page/:num"
+
+rdiscount:
+  extensions: [smart]
+
+sass:
+  style: :compressed
+  sass_dir: _sass
 
 # Build settings
-plugins:
-  - jekyll-feed
+# plugins:
+#   - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -45,3 +55,22 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+defaults:
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
+    values:
+      is_post: true # automatically set is_post=true for all posts
+  - scope:
+      path: "category"
+    values:
+      is_category_page: true
+      layout: category
+  - scope:
+      path: "subcategory"
+    values:
+      layout: "subcategory"
+
+markdown: kramdown
+permalink: /:year/:month/:title

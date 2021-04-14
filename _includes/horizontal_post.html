@@ -1,0 +1,18 @@
+{% assign post = include.post %}
+<div class="row article article-horiozntal">
+  <div class="col-md-3 center-fill-container img-container">
+    <img src="/images/posts/{{post.image}}" alt=""  class="img-center-fill center-both {% if post.image == null %}hidden{% endif %}">
+  </div>
+  <div class="details-container col-md-9" style="padding-left: 46px;">
+    <div class="details">
+      <div class="head">
+        <h3 class="title" style="font-size: 20px; font-weight: bold;"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <div class="tag"><a href="/category/{{ post.category }}/">{{ site.data.categories_name[post.category] }}</a></div>
+      </div>
+      <div class="excerpt" style="font-weight: 300; font-size: 16px; line-height: 90%; color: #5C6C73;">{% if post.excerpt != null %}{{ post.content | markdownify | truncate: 450 }}{% endif %}</div>
+      <span class="date" style="font-size: 14px; letter-spacing: 0px; color: #185873; font-style: normal;">{{ post.date | date: "%b %e, %Y" | upcase }}</span>
+
+    </div> <!--details-->
+  </div> <!--details-container-->
+</div> <!--article-->
+

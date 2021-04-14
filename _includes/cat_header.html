@@ -1,0 +1,26 @@
+{% assign post = site.categories[page.category].first %}
+<div id="header" class="container category-header">
+  <div class="row">
+    <div class="col-md-8 tinted cover-image center-fill-container">
+      {% if post.image != nil %}
+      <div class="img-container">
+        <img class="center-both img-center-fill" src="/images/posts/{{ post.image }}" alt="">
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="col-md-4 cover-details" style="padding-top: 0%; padding-left: 46px;">
+      <div class="cover-title">
+        <a  href="{{ post.url }}" class="cover-link">
+          <h1 class="title">{{ post.title  }}</h1>
+        </a>
+      </div>
+      <div class="cover-excerpt" style="font-weight: 300; line-height: 90%; font-size: 16px; letter-spacing: 0.09px; color: #5C6C73; margin-top: 12px; margin-bottom: 29px;">
+        {{ post.content | truncate: 250 }}
+      </div>
+      <div class="date" style="font-size: 14px; letter-spacing: 0px; color: #185873; font-style: normal; font-weight: normal;">{{ post.date | date: "%-d %B %Y" }}</div>
+
+    </div>
+  </div>
+</div>
+

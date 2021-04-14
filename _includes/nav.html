@@ -1,7 +1,63 @@
-<nav>
-    {% for item in site.data.nav %}
-      <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
-        {{ item.name | upcase }}
-      </a>
-    {% endfor %}
-  </nav>
+<div class="pre-nav container" >
+  <a href="/">
+    <div class="brand pull-left">
+      <img class="logo" src="/images/logo-black.png">
+      <div class="name-container">
+        <div class="name">Watch Out!</div>
+        <div class="desc">Student Media<br>Body of IITR</div>
+      </div>
+    </div>
+  </a>
+  <div class="social pull-right">
+    <a href="/about">About</a>
+    <a href="/guide">Guide</a>
+    <a href="/getinvolved">Get Involved</a>
+    <a href="http://fb.com/watchoutiitr"><img src="/images/fb-logo.svg"></a>
+    <a href="https://www.youtube.com/channel/UCthZ7tKOzy4EJpuVxtdcp1A"><img src="/images/youtube-play.svg"></a>
+    <a href="https://www.linkedin.com/company-beta/13290672/"><img src="/images/linkedin.png"></a>
+  </div>
+</div>
+
+<nav class="navbar navbar-default" data-spy="affix" data-offset-top="110">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+        aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- <a class="navbar-brand" href="/">Watch Out!</a> -->
+    </div>
+
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right hacky-css">
+        {% for cat in site.data.categories %}
+        {% if cat.subcategories != nil %}
+
+        <li class="dropdown">
+          <a class="hover-underline" href="/category/{{cat.name}}" style="padding: 0%;" class="dropdown-toggle" data-toggle="dropdown">{{ cat.title }}
+             <span class="caret">
+            </span></a>
+          <ul class="dropdown-menu">
+
+            {% for subcat in cat.subcategories %}
+            {% if subcat.title != nil %}  
+                   
+            <li><a class="hover-underline" href="/subcategory/{{ subcat.name }}/">{{ subcat.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+
+          </ul>
+        </li>
+
+        {% elsif cat.name != nil%}
+        <li><a class="hover-underline" href="/category/{{ cat.name }}/">{{ cat.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <!--/.nav-collapse -->
+  </div>
+</nav>
